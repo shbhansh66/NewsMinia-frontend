@@ -43,9 +43,15 @@ const Dashboard = ({ highlightSource }) => {
     <div className="p-8 bg-gray-50 min-h-screen">
 
       {/* Title */}
-      <h1 className="text-4xl font-extrabold mb-6 text-gray-900 text-center">
-        🗞️ Global News Aggregator
-      </h1>
+    <h1
+  className="
+    text-2xl md:text-4xl font-extrabold mb-6 text-gray-700 text-center
+    drop-shadow-[3px_3px_0px_rgba(0,0,0,0.25)]
+    animate-titleFade
+  "
+>
+  🗞️ Global News Aggregator
+</h1>
 
       {/* Category Filter */}
       <div className="w-full mb-6 flex justify-center">
