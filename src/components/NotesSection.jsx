@@ -1,4 +1,5 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect } from "react";
+import { Plus } from "lucide-react";
 
 const NotesSection = () => {
   const [notes, setNotes] = useState(() => {
@@ -11,9 +12,9 @@ const NotesSection = () => {
   });
 
   const [newNote, setNewNote] = useState("");
-  const [isOpen, setIsOpen] = useState(false); // ⭐ floating panel toggle
+  const [isOpen, setIsOpen] = useState(false);
 
-  // Save notes to localStorage
+  // Save notes
   useEffect(() => {
     localStorage.setItem("news-aggregator-notes", JSON.stringify(notes));
   }, [notes]);
@@ -25,26 +26,32 @@ const NotesSection = () => {
   };
 
   const deleteNote = (id) => {
-    setNotes(notes.filter(n => n.id !== id));
+    setNotes(notes.filter((n) => n.id !== id));
   };
 
   return (
     <>
-      {/*  Floating Notes Button */}
-      <button
-        className="fixed bottom-6 right-6 bg-blue-600 text-white p-4 rounded-full shadow-xl hover:bg-blue-700 transition duration-200"
-        onClick={() => setIsOpen(true)}
-        title="Open Notes"
-      >
-        📝
-      </button>
+      {/* BOTTOM CENTER ADD BUTTON */}
+     <div className="
+  fixed bottom-4 z-[9999] 
+  left-1/2 -translate-x-1/2 
+  md:left-auto md:right-6 md:translate-x-0
+  flex justify-center
+">
+  <button
+    onClick={() => setIsOpen(true)}
+    className="bg-blue-600 w-16 h-16 rounded-full flex items-center justify-center shadow-2xl border-4 border-white text-white hover:bg-blue-700 active:scale-95 transition"
+  >
+  📝
+  </button>
+</div>
 
-    {/* ⭐ Notes Drawer */}
-<div
-  className={`fixed top-0 right-0 h-full w-80 bg-white shadow-2xl border-l border-gray-300 transform transition-transform duration-300 z-[9999] ${
-    isOpen ? "translate-x-0" : "translate-x-full"
-  }`}
->
+      {/* NOTES DRAWER */}
+      <div
+        className={`fixed top-0 right-0 h-full w-80 bg-white shadow-2xl border-l border-gray-300 transform transition-transform duration-300 z-[99999] ${
+          isOpen ? "translate-x-0" : "translate-x-full"
+        }`}
+      >
         {/* Header */}
         <div className="p-4 border-b flex justify-between items-center bg-gray-100">
           <h2 className="text-xl font-semibold">📝 Notes</h2>

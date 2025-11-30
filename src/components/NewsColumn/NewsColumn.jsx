@@ -56,7 +56,7 @@ const NewsColumn = ({ sourceId, sourceName, headerColor, initialNews = [], isSea
         selectedCategory={selectedCategory}
       />
 
-      <div className="p-4 max-h-[80vh] overflow-y-auto">
+      <div className="p-4 max-h-[80vh] overflow-y-auto no-scrollbar">
         {loading && <Loader />}
 
         {!loading && error && <ErrorBox message={error} />}
