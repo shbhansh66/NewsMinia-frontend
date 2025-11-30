@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
-import NewsColumn from './NewsColumn.jsx';
+import NewsColumn from './NewsColumn/NewsColumn.jsx';
 import NotesSection from './NotesSection.jsx';
-import Footer from './Footer.jsx';
+
 
 const categories = [
   'All', 'Business', 'Politics', 'Sports', 'Technology',
@@ -60,7 +60,7 @@ const Dashboard = () => {
         ))}
       </div>
 
-      {/* ⭐ Floating Notes Always Visible */}
+      {/* Floating Notes Always Visible */}
       <NotesSection />
     </div>
   );
