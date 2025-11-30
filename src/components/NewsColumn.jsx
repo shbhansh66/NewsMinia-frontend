@@ -1,7 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 
-const API_BASE_URL = 'http://localhost:5000/api/news';
+const API_BASE_URL = "https://newsminia-backend-1.onrender.com/api/news";
+
 
 const NewsColumn = ({ sourceId, sourceName, headerColor, initialNews = [], isSearchMode = false, selectedCategory }) => {
   const [news, setNews] = useState(initialNews);
