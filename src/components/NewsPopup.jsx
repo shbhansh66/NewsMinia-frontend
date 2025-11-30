@@ -5,7 +5,7 @@ const NewsPopup = ({ visible, onClose, newsSources, onSelect }) => {
 
   return (
     <div
-      className="fixed inset-0 bg-black bg-opacity-40 flex justify-center items-end z-[9999]"
+      className="fixed inset-0  bg-opacity-40 flex justify-center items-end z-[9999]"
       onClick={onClose}
     >
       {/* Popup Box */}
