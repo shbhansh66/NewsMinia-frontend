@@ -32,10 +32,10 @@ const NotesSection = () => {
   return (
     <>
       {/* BOTTOM CENTER ADD BUTTON */}
-     <div className="
+     <div className="mobile-note
   fixed bottom-4 z-[9999] 
-  left-1/2 -translate-x-1/2 
-  md:left-auto md:right-6 md:translate-x-0
+   -translate-x-1/2 
+  right-0 sm:right-6 sm:translate-x-0
   flex justify-center
 ">
   <button

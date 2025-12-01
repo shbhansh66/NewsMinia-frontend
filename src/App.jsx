@@ -39,10 +39,9 @@ function App() {
   };
 
   return (
-    <div className="min-h-screen bg-gray-50 pb-20">
+    <div className="min-h-screen bg-gray-50 ">
       <Dashboard key={refreshKey} highlightSource={highlightSource} />
 
-      <Footer />
 
       <BottomNav selectedTab={selectedTab} setSelectedTab={handleTabClick} />
 
@@ -52,6 +51,7 @@ function App() {
         newsSources={newsSources}
         onSelect={handleSelectSource}
       />
+      <Footer />
     </div>
   );
 }

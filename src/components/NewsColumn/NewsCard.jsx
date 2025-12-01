@@ -15,7 +15,7 @@ const NewsCard = ({ item }) => {
         <a
           href={item.link}
           target="_blank"
-          className="text-base font-medium hover:text-blue-700 block"
+          className="text-[13px] sm:text-base font-medium hover:text-blue-700 block"
         >
           • {item.title}
         </a>

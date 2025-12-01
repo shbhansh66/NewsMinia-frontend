@@ -24,3 +24,36 @@
     .animate-titleFade {
       animation: titleFade 0.8s ease-out forwards;
     }
+
+
+    .mobile-bottom-nav {
+  display: flex;
+}
+
+@media (min-width: 490px) {
+  /* Tablet & Desktop par hide */
+  .mobile-bottom-nav {
+    display: none;
+  }
+
+  
+}
+
+
+
+/* ABOVE 490px → BUTTON RIGHT SIDE + FIXED */
+@media (max-width: 400px) {
+  .mobile-note {
+   position: fixed;
+    right: 115px;
+    bottom: 25px;
+  
+  }
+}
+
+@media (min-width: 400px) {
+  .bottom-nav {
+   display:none;
+  
+  }
+}

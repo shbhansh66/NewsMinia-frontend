@@ -2,7 +2,7 @@ import React from "react";
 import { Linkedin, Twitter, Facebook, Heart } from "lucide-react";
 
 const FooterBottom = ({ currentYear }) => (
-  <div className="mt-8 pt-8 border-t border-gray-300 dark:border-gray-700">
+  <div className="mt-8 pt-4 border-t border-gray-300 dark:border-gray-700">
 
     <div className="flex flex-col md:flex-row md:justify-between md:items-center space-y-4 md:space-y-0">
 

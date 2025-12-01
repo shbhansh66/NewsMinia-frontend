@@ -29,7 +29,7 @@ const Dashboard = ({ highlightSource }) => {
     DJ: useRef(null),
   };
 
-  // ⭐ If App sends scroll signal → scroll to that source
+  //  If App sends scroll signal → scroll to that source
   useEffect(() => {
     if (highlightSource && sectionRefs[highlightSource]) {
       sectionRefs[highlightSource].current?.scrollIntoView({
@@ -40,7 +40,7 @@ const Dashboard = ({ highlightSource }) => {
   }, [highlightSource]);
 
   return (
-    <div className="p-8 bg-gray-50 min-h-screen">
+    <div className="p-3 bg-gray-50 min-h-screen">
 
       {/* Title */}
     <h1
@@ -54,7 +54,7 @@ const Dashboard = ({ highlightSource }) => {
 </h1>
 
       {/* Category Filter */}
-      <div className="w-full mb-6 flex justify-center">
+      <div className="w-full mb-4 flex justify-center">
         <div className="flex overflow-x-auto gap-2 no-scrollbar">
           {categories.map((category) => (
             <button
@@ -76,7 +76,7 @@ const Dashboard = ({ highlightSource }) => {
       </div>
 
       {/* ALL NEWS COLUMNS */}
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-5">
+      <div className=" grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-3">
         {newsSources.map((source) => (
           <div key={source.id} ref={sectionRefs[source.id]}>
             <NewsColumn
