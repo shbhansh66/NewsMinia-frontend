@@ -4,6 +4,7 @@ import Dashboard from "./components/Dashboard";
 import Footer from "./components/footer/Footer";
 import NewsPopup from "./components/NewsPopup";
 
+
 const newsSources = [
   { id: "ET", name: "THE ECONOMIC TIMES" },
   { id: "HINDU", name: "THE HINDU" },

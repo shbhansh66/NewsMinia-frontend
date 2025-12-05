@@ -1,6 +1,8 @@
 import React, { useState, useEffect, useRef } from 'react';
 import NewsColumn from './NewsColumn/NewsColumn.jsx';
 import NotesSection from './NotesSection.jsx';
+import Time from './WeatherTime/TimeWidget.jsx';
+import Weather from './WeatherTime/WeatherWidget.jsx';
 
 const categories = [
   'All', 'Business', 'Politics', 'Sports', 'Technology',
@@ -41,6 +43,7 @@ const Dashboard = ({ highlightSource }) => {
 
   return (
     <div className="p-3 bg-gray-50 min-h-screen">
+<Time />
 
       {/* Title */}
     <h1
@@ -52,6 +55,8 @@ const Dashboard = ({ highlightSource }) => {
 >
   🗞️ Global News Aggregator
 </h1>
+<Weather />
+
 
       {/* Category Filter */}
       <div className="w-full mb-4 flex justify-center">
