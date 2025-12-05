@@ -48,7 +48,7 @@ const Dashboard = ({ highlightSource }) => {
       {/* Title */}
     <h1
   className="
-    text-[16px] md:text-4xl font-extrabold mb-6 text-gray-700 text-center
+    text-[17px] md:text-4xl font-extrabold mb-6 text-gray-700 text-center
     drop-shadow-[3px_3px_0px_rgba(0,0,0,0.25)]
     animate-titleFade
   "

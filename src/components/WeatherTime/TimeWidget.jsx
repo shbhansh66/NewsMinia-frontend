@@ -13,7 +13,7 @@ export default function CurrentTime() {
       className="
         p-1 sm:p-2 
         w-24 sm:w-32 
-        absolute top-2 left-0 sm:top-3 sm:left-3
+        absolute top-2 left-[-10px] sm:top-3 sm:left-3
         text-black 
         rounded-md 
         text-center

@@ -61,7 +61,7 @@ export default function Weather() {
   }, [coords, fetchWeather]);
 
   return (
-    <div className="w-24 sm:w-36   text-black absolute top-2 right-4 rounded-lg">
+    <div className="w-24 sm:w-36   text-black absolute top-1 right-[-5px]  sm:top-2 sm:right-4 rounded-lg">
 
     
 
@@ -85,7 +85,7 @@ export default function Weather() {
           <div className="flex items-center justify-center gap-1 mt-[-10px] sm:mt-1">
             <img
               src={weather.current.condition.icon}
-              className="w-8 h-8"
+              className="w-8 h-8 relative left-4"
             />
             <p className="text-xs sm:text-2xl font-bold">
               {weather.current.temp_c}°C
@@ -96,7 +96,7 @@ export default function Weather() {
             {weather.current.condition.text}
           </p>
 
-          <div className="grid  sm:grid-cols-2  gap-1 text-[10px]">
+          <div className=" grid  sm:grid-cols-2  gap-1 text-[10px]">
             <div className="relative left-4 sm:left-0 p-1 rounded-md flex flex-row sm:flex-col gap-1 mt-[-8px] sm:mt-0">
               <p className="opacity-80">Humidity</p>
               <p className="font-semibold">
