@@ -61,7 +61,7 @@ export default function Weather() {
   }, [coords, fetchWeather]);
 
   return (
-    <div className="w-44 p-2 bg-transparent backdrop-blur-sm text-black absolute top-4 right-4 rounded-lg">
+    <div className="w-24 sm:w-36   text-black absolute top-2 right-4 rounded-lg">
 
     
 
@@ -82,29 +82,29 @@ export default function Weather() {
             📍 {weather.location.name}
           </p>
 
-          <div className="flex items-center justify-center gap-1 mt-1">
+          <div className="flex items-center justify-center gap-1 mt-[-10px] sm:mt-1">
             <img
               src={weather.current.condition.icon}
               className="w-8 h-8"
             />
-            <p className="text-2xl font-bold">
-              {weather.current.temp_c}°
+            <p className="text-xs sm:text-2xl font-bold">
+              {weather.current.temp_c}°C
             </p>
           </div>
 
-          <p className="text-[10px] opacity-80 mt-1">
+          <p className="text-[8px] sm:text-[10px] opacity-80 mt-[-10px] sm:mt-0">
             {weather.current.condition.text}
           </p>
 
-          <div className="grid grid-cols-2 gap-1 mt-2 text-[10px]">
-            <div className="bg-white/10 backdrop-blur-sm p-1 rounded-md">
+          <div className="grid  sm:grid-cols-2  gap-1 text-[10px]">
+            <div className="relative left-4 sm:left-0 p-1 rounded-md flex flex-row sm:flex-col gap-1 mt-[-8px] sm:mt-0">
               <p className="opacity-80">Humidity</p>
               <p className="font-semibold">
                 {weather.current.humidity}%
               </p>
             </div>
 
-            <div className="bg-white/10 backdrop-blur-sm p-1 rounded-md">
+            <div className="relative left-4 sm:left-0  p-1 rounded-md flex flex-row gap-1 sm:flex-col mt-[-15px] sm:mt-0  ">
               <p className="opacity-80">Wind</p>
               <p className="font-semibold">
                 {weather.current.wind_kph} KPH

@@ -10,15 +10,22 @@ export default function CurrentTime() {
 
   return (
     <div 
-      className="p-2 w-40 bg-transparent backdrop-blur-sm text-black rounded-lg text-center"
+      className="
+        p-1 sm:p-2 
+        w-24 sm:w-32 
+        absolute top-2 left-0 sm:top-3 sm:left-3
+        text-black 
+        rounded-md 
+        text-center
+      "
     >
-      
-
-      <p className="text-xl font-semibold leading-tight">
+      {/* Time */}
+      <p className="text-xs sm:text-sm font-semibold leading-tight">
         {time.toLocaleTimeString()}
       </p>
 
-      <p className="text-[10px] opacity-60 mt-1">
+      {/* Date */}
+      <p className="text-[8px] sm:text-[10px] opacity-70 mt-1">
         {time.toLocaleDateString()}
       </p>
     </div>
